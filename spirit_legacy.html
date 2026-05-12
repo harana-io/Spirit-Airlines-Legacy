@@ -29,7 +29,6 @@ body { background: var(--black); color: var(--w); font-family: var(--sans); over
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--d2); }
 ::-webkit-scrollbar-thumb { background: var(--y); border-radius: 3px; }
-
 /* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 999;
@@ -48,7 +47,6 @@ nav {
 .nav-links { display: flex; gap: 1.8rem; list-style: none; }
 .nav-links a { color: var(--g); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
 .nav-links a:hover { color: var(--y); }
-
 /* ── HERO ── */
 #hero {
   min-height: 100vh; display: flex; flex-direction: column;
@@ -58,7 +56,6 @@ nav {
 .star-field { position: absolute; inset: 0; pointer-events: none; }
 .star { position: absolute; background: #fff; border-radius: 50%; animation: twinkle var(--dur, 3s) infinite var(--del, 0s); }
 @keyframes twinkle { 0%,100%{opacity:.8} 50%{opacity:.15} }
-
 .runway-wrap {
   position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
   width: 260px; height: 55vh; perspective: 400px;
@@ -80,14 +77,11 @@ nav {
 .rdash:nth-child(2){animation-delay:-.28s} .rdash:nth-child(3){animation-delay:-.56s}
 .rdash:nth-child(4){animation-delay:-.84s} .rdash:nth-child(5){animation-delay:-1.12s}
 @keyframes rdash-anim { 0%{transform:translateY(0);opacity:.7} 100%{transform:translateY(60px);opacity:0} }
-
 .rlight { position: absolute; bottom: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--y); }
 .rlight.left  { left: 20px;  animation: rbl 1.2s .1s infinite; }
 .rlight.right { right: 20px; animation: rbl 1.2s .6s infinite; }
 @keyframes rbl { 0%,100%{opacity:1;box-shadow:0 0 8px var(--y)} 50%{opacity:.2;box-shadow:none} }
-
 .hero-inner { text-align: center; z-index: 10; padding: 2rem 1.5rem; }
-
 /* FIDS Departure Board */
 .fids {
   display: inline-block; background: #060606;
@@ -113,7 +107,6 @@ nav {
 .fc-status.dep { color: var(--green); }
 .fc-status.brd { color: var(--blue); }
 .fc-status.fin { color: var(--red); animation: bl 1.5s infinite; }
-
 .hero-tagline { font-size: .72rem; letter-spacing: .35em; color: var(--g); text-transform: uppercase; margin-bottom: 1rem; }
 .hero-title {
   font-size: clamp(3.2rem, 9vw, 6.5rem); font-weight: 900; line-height: .92;
@@ -121,7 +114,6 @@ nav {
 }
 .hero-title .spirit { color: var(--y); }
 .hero-title .airlines { color: var(--w); }
-
 .hero-badge {
   display: inline-flex; align-items: center; gap: 1rem;
   font-family: var(--mono); font-size: .8rem; color: var(--y);
@@ -131,7 +123,6 @@ nav {
 }
 .plane-icon { animation: hover-plane 3s ease-in-out infinite; display: inline-block; }
 @keyframes hover-plane { 0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-6px) rotate(1.5deg)} }
-
 /* ── A320 SVG SECTION ── */
 #aircraft { padding: 4rem 0 5rem; background: linear-gradient(var(--black), var(--d2), var(--black)); }
 #aircraft .inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
@@ -139,7 +130,6 @@ nav {
 .sec-label::before { content:''; width:28px; height:1px; background:var(--y); display:inline-block; }
 .sec-title { font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 900; margin-bottom: .75rem; }
 .sec-desc { color: var(--g); font-size: .95rem; line-height: 1.75; max-width: 580px; margin-bottom: 2.5rem; }
-
 .a320-wrap { position: relative; max-width: 900px; margin: 0 auto; }
 .a320-svg { width: 100%; height: auto; }
 .a320-zone { cursor: pointer; transition: all .2s; }
@@ -149,7 +139,6 @@ nav {
 .a320-zone:hover .zone-stroke { opacity: 0.6; }
 .a320-label { font-size: 11px; fill: var(--y); font-family: var(--mono); opacity: 0; transition: opacity .2s; pointer-events: none; }
 .a320-zone:hover .a320-label { opacity: 1; }
-
 .zone-tooltip {
   position: absolute; background: var(--d2); border: 1px solid rgba(252,209,22,.3);
   border-radius: 8px; padding: .75rem 1rem; font-size: .8rem; line-height: 1.5;
@@ -158,7 +147,6 @@ nav {
 }
 .zone-tooltip.show { opacity: 1; }
 .zone-tooltip strong { color: var(--y); display: block; margin-bottom: .2rem; font-size: .75rem; letter-spacing: .1em; }
-
 /* ── STATS BAR ── */
 .stats-bar {
   display: grid; grid-template-columns: repeat(4, 1fr);
@@ -173,19 +161,16 @@ nav {
 .stat-cell:last-child { border-right: none; }
 .stat-num { font-size: 2.4rem; font-weight: 900; color: var(--y); letter-spacing: -.02em; }
 .stat-lbl { font-size: .7rem; color: var(--g); letter-spacing: .1em; text-transform: uppercase; margin-top: .25rem; }
-
 /* ── TICKER ── */
 .ticker-wrap { background: var(--y); overflow: hidden; padding: 7px 0; }
 .ticker-track { display: flex; white-space: nowrap; animation: ticker 40s linear infinite; }
 .ticker-track:hover { animation-play-state: paused; }
 .tick-item { font-family: var(--mono); font-size: .72rem; font-weight: 700; color: #000; letter-spacing: .1em; padding: 0 2.5rem; }
 @keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-
 /* ── SECTIONS ── */
 .section { padding: 5.5rem 2rem; max-width: 1100px; margin: 0 auto; }
 .section.wide { max-width: 1200px; }
 hr.rule { border: none; border-top: 1px solid var(--d4); }
-
 /* ── ATA GRID ── */
 .ata-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
 .ata-card {
@@ -207,7 +192,6 @@ hr.rule { border: none; border-top: 1px solid var(--d4); }
 .ata-blurb { font-size: .76rem; color: var(--g); line-height: 1.55; max-height: 0; overflow: hidden; transition: max-height .3s ease; }
 .ata-card.active .ata-blurb { max-height: 200px; }
 .ata-tip { font-size: .68rem; color: var(--g); margin-top: .5rem; }
-
 /* ── ENGINES ── */
 .engine-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
 .eng-card {
@@ -229,7 +213,6 @@ hr.rule { border: none; border-top: 1px solid var(--d4); }
 .spec-key { font-size: .73rem; color: var(--g); }
 .spec-val { font-family: var(--mono); font-size: .82rem; color: var(--y); }
 .eng-feat { margin-top: 1.2rem; padding: .8rem; background: rgba(252,209,22,.05); border-radius: 8px; font-size: .75rem; color: var(--lg); line-height: 1.6; border-left: 2px solid var(--y); }
-
 /* ── APU ── */
 .apu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
 .apu-card { background: var(--d2); border: 1px solid var(--d4); border-radius: 16px; padding: 2rem; transition: all .3s; }
@@ -240,7 +223,6 @@ hr.rule { border: none; border-top: 1px solid var(--d4); }
 .apu-item { display: flex; gap: .5rem; align-items: flex-start; }
 .apu-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--y); margin-top: .35rem; flex-shrink: 0; }
 .apu-text { font-size: .8rem; color: var(--lg); line-height: 1.5; }
-
 /* ── COCKPIT ── */
 .cockpit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
 .cockpit-card { background: var(--d2); border: 1px solid var(--d4); border-radius: 14px; padding: 1.5rem; transition: all .28s; }
@@ -248,7 +230,6 @@ hr.rule { border: none; border-top: 1px solid var(--d4); }
 .cc-icon { font-size: 2rem; margin-bottom: .85rem; }
 .cc-name { font-size: 1rem; font-weight: 700; color: var(--y); margin-bottom: .5rem; }
 .cc-desc { font-size: .8rem; color: var(--g); line-height: 1.65; }
-
 /* ── TRAX BOARD ── */
 .trax-board { background: var(--d2); border: 1px solid var(--d4); border-radius: 16px; overflow: hidden; margin-top: 2rem; }
 .trax-titlebar { background: var(--d3); padding: .85rem 1.5rem; border-bottom: 1px solid var(--d4); display: flex; align-items: center; justify-content: space-between; }
@@ -268,7 +249,6 @@ hr.rule { border: none; border-top: 1px solid var(--d4); }
 .trax-num { font-family: var(--mono); font-size: .65rem; color: var(--y); background: rgba(252,209,22,.1); border-radius: 4px; padding: 2px 7px; min-width: 34px; text-align: center; flex-shrink: 0; }
 .trax-mname { font-size: .8rem; color: var(--lg); flex: 1; }
 .trax-check { color: var(--green); font-size: .8rem; }
-
 /* ── TIMELINE ── */
 .timeline { position: relative; padding-left: 2.5rem; margin-top: 2.5rem; }
 .timeline::before { content:''; position:absolute; left:.2rem; top:.5rem; bottom:0; width:1px; background:linear-gradient(to bottom,var(--y),rgba(252,209,22,.05)); }
@@ -277,7 +257,6 @@ hr.rule { border: none; border-top: 1px solid var(--d4); }
 .tl-year { font-family: var(--mono); font-size: .7rem; color: var(--y); letter-spacing: .1em; margin-bottom: .2rem; }
 .tl-event { font-size: 1rem; font-weight: 700; margin-bottom: .2rem; }
 .tl-detail { font-size: .82rem; color: var(--g); line-height: 1.6; }
-
 /* ── TRIBUTE ── */
 #tribute {
   padding: 8rem 2rem; text-align: center; position: relative; overflow: hidden;
@@ -290,19 +269,16 @@ hr.rule { border: none; border-top: 1px solid var(--d4); }
 .trib-text { font-size:1rem; color:var(--lg); line-height:2; margin-bottom:2.5rem; }
 .trib-sig { font-size:.75rem; color:var(--g); letter-spacing:.2em; text-transform:uppercase; }
 .trib-sig strong { color:var(--y); }
-
 .trib-placard {
   display:inline-block; border:1px solid rgba(252,209,22,.2);
   border-radius:8px; padding:.8rem 2rem; margin-bottom:3rem;
   background:rgba(252,209,22,.04);
   font-family:var(--mono); font-size:.75rem; color:var(--y); letter-spacing:.12em;
 }
-
 /* ── FOOTER ── */
 footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px solid var(--d4); }
 .foot-logo { font-size:1.4rem; font-weight:900; color:var(--y); letter-spacing:.2em; margin-bottom:.4rem; }
 .foot-sub { font-size:.7rem; color:var(--g); letter-spacing:.15em; }
-
 /* ── UTILITY ── */
 .fade-up { opacity:1; transform:translateY(0); transition:opacity .65s ease, transform .65s ease; }
 .fade-up.vis { opacity:1; transform:translateY(0); }
@@ -310,7 +286,6 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
 .js-anim .fade-up.vis { opacity:1; transform:translateY(0); }
 .y { color:var(--y); }
 .mono { font-family:var(--mono); }
-
 @media(max-width:768px){
   .engine-grid,.apu-grid,.stats-bar{grid-template-columns:1fr}
   .stat-cell{border-right:none;border-bottom:1px solid var(--d4)}
@@ -323,7 +298,6 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
 </style>
 </head>
 <body>
-
 <!-- NAV -->
 <nav>
   <a class="nav-brand" href="#">
@@ -344,7 +318,6 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
     <li><a href="#tribute">Tribute</a></li>
   </ul>
 </nav>
-
 <!-- HERO -->
 <section id="hero">
   <div class="star-field" id="stars"></div>
@@ -354,7 +327,6 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
     <div class="rlight left"></div>
     <div class="rlight right"></div>
   </div>
-
   <div class="hero-inner">
     <!-- FIDS Board -->
     <div class="fids">
@@ -381,7 +353,6 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
         <span class="fc-status fin">FINAL FLIGHT</span>
       </div>
     </div>
-
     <p class="hero-tagline">A tribute to the yellow fleet</p>
     <h1 class="hero-title">
       <span class="spirit">SPIRIT</span><br>
@@ -392,11 +363,9 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
       1983 &nbsp;—&nbsp; 2024
       <span class="plane-icon">✈</span>
     </div>
-
     <!-- A320 SVG Silhouette -->
     <div class="a320-wrap" id="a320-wrap">
       <svg class="a320-svg" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
-        <!-- Sky gradient bg -->
         <defs>
           <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#0a0a1a" stop-opacity="0"/>
@@ -418,14 +387,10 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
             <stop offset="100%" stop-color="#FCD116" stop-opacity="0"/>
           </linearGradient>
         </defs>
-
         <!-- Main fuselage -->
         <g id="fuselage">
-          <!-- Fuselage body -->
           <path d="M 100 115 Q 120 95 160 88 L 720 88 Q 760 88 790 100 Q 820 112 830 125 Q 820 135 790 140 L 160 140 Q 120 133 100 115 Z" fill="url(#bodyGrad)" stroke="#333" stroke-width="1"/>
-          <!-- Spirit yellow stripe -->
           <path d="M 110 108 L 785 108" stroke="url(#yellowStripe)" stroke-width="3.5" stroke-linecap="round"/>
-          <!-- Windows row -->
           <g id="windows" fill="none" stroke="#4a6080" stroke-width=".8">
             <rect x="175" y="97" width="10" height="7" rx="2" fill="#1a2535" stroke="#2a4060"/>
             <rect x="195" y="97" width="10" height="7" rx="2" fill="#1a2535" stroke="#2a4060"/>
@@ -457,124 +422,94 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
             <rect x="715" y="97" width="10" height="7" rx="2" fill="#1a2535" stroke="#2a4060"/>
           </g>
         </g>
-
         <!-- Nose / Cockpit -->
         <g id="cockpit-zone" class="a320-zone" data-zone="cockpit">
           <path d="M 60 115 Q 80 90 120 87 L 165 87 L 165 140 L 120 140 Q 80 138 60 115 Z" class="zone-fill"/>
           <path d="M 60 115 Q 80 90 120 87 L 165 87 L 165 140 L 120 140 Q 80 138 60 115 Z" class="zone-stroke"/>
-          <!-- Radome -->
           <path d="M 60 115 Q 80 90 120 87 L 165 87 L 165 140 L 120 140 Q 80 138 60 115 Z" fill="url(#bodyGrad)" stroke="#333" stroke-width="1"/>
-          <!-- Windshield -->
           <path d="M 95 100 Q 110 94 130 93 L 155 93 L 155 108 L 130 108 Q 110 107 95 100 Z" fill="#0d1520" stroke="#2a4060" stroke-width="1"/>
-          <!-- Pitot / nose tip -->
           <line x1="58" y1="115" x2="40" y2="115" stroke="#555" stroke-width="1.5" stroke-linecap="round"/>
           <text class="a320-label" x="68" y="82" text-anchor="middle">COCKPIT</text>
         </g>
-
-        <!-- Forward Fuselage (Doors 1, ATA 22/23/24) -->
+        <!-- Forward Fuselage -->
         <g id="fwd-zone" class="a320-zone" data-zone="fwd">
           <rect x="165" y="87" width="160" height="53" class="zone-fill" rx="0"/>
           <rect x="165" y="87" width="160" height="53" class="zone-stroke" rx="0"/>
           <rect x="165" y="87" width="160" height="53" fill="transparent"/>
-          <!-- Door 1 -->
           <rect x="175" y="108" width="18" height="30" rx="2" fill="#1a1a1a" stroke="#3a3a3a" stroke-width="1"/>
           <text class="a320-label" x="245" y="82" text-anchor="middle">FWD CAB</text>
         </g>
-
         <!-- Center / Wing Box -->
         <g id="center-zone" class="a320-zone" data-zone="center">
           <rect x="325" y="87" width="200" height="53" class="zone-fill" rx="0"/>
           <rect x="325" y="87" width="200" height="53" class="zone-stroke" rx="0"/>
           <rect x="325" y="87" width="200" height="53" fill="transparent"/>
-          <!-- Over-wing exit markings -->
           <rect x="370" y="118" width="14" height="22" rx="2" fill="#1a1a1a" stroke="#3a3a3a" stroke-width="1"/>
           <rect x="480" y="118" width="14" height="22" rx="2" fill="#1a1a1a" stroke="#3a3a3a" stroke-width="1"/>
           <text class="a320-label" x="425" y="82" text-anchor="middle">CTR / WING BOX</text>
         </g>
-
         <!-- Aft Fuselage -->
         <g id="aft-zone" class="a320-zone" data-zone="aft">
           <rect x="525" y="87" width="190" height="53" class="zone-fill" rx="0"/>
           <rect x="525" y="87" width="190" height="53" class="zone-stroke" rx="0"/>
           <rect x="525" y="87" width="190" height="53" fill="transparent"/>
-          <!-- Door 4 -->
           <rect x="680" y="108" width="18" height="30" rx="2" fill="#1a1a1a" stroke="#3a3a3a" stroke-width="1"/>
           <text class="a320-label" x="620" y="82" text-anchor="middle">AFT CAB</text>
         </g>
-
-        <!-- Tail Section (APU) -->
+        <!-- Tail Section -->
         <g id="tail-zone" class="a320-zone" data-zone="tail">
           <path d="M 715 88 L 830 125 L 715 140 Z" class="zone-fill"/>
           <path d="M 715 88 L 830 125 L 715 140 Z" class="zone-stroke"/>
           <path d="M 715 88 L 830 125 L 715 140 Z" fill="transparent"/>
-          <!-- APU exhaust -->
           <circle cx="826" cy="125" r="4" fill="#222" stroke="#444"/>
           <text class="a320-label" x="770" y="82" text-anchor="middle">TAIL / APU</text>
         </g>
-
         <!-- Main Wing -->
         <g id="wing-zone" class="a320-zone" data-zone="wing">
           <path d="M 360 140 L 280 210 L 500 210 L 500 140 Z" class="zone-fill"/>
           <path d="M 360 140 L 280 210 L 500 210 L 500 140 Z" class="zone-stroke"/>
           <path d="M 360 140 L 280 210 L 500 210 L 500 140 Z" fill="url(#wingGrad)" stroke="#2a2a2a" stroke-width="1"/>
-          <!-- Sharklet -->
           <path d="M 280 210 L 265 190 L 275 212 Z" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
           <text class="a320-label" x="390" y="200" text-anchor="middle">WING / FUEL</text>
         </g>
-
-        <!-- Engine (IAE V2500 / CFM) -->
+        <!-- Engine -->
         <g id="engine-zone" class="a320-zone" data-zone="engine">
           <ellipse cx="350" cy="205" rx="18" ry="12" class="zone-fill"/>
           <rect x="300" y="212" width="110" height="24" rx="12" class="zone-fill"/>
           <ellipse cx="350" cy="205" rx="18" ry="12" class="zone-stroke"/>
           <rect x="300" y="212" width="110" height="24" rx="12" class="zone-stroke"/>
-          <!-- Engine nacelle -->
           <rect x="300" y="214" width="110" height="20" rx="10" fill="#1e1e1e" stroke="#333" stroke-width="1"/>
           <ellipse cx="350" cy="205" rx="17" ry="11" fill="#161616" stroke="#333" stroke-width="1"/>
-          <!-- Fan blades hint -->
           <ellipse cx="350" cy="205" rx="10" ry="7" fill="#0d0d0d" stroke="#222"/>
-          <!-- Inlet -->
           <ellipse cx="302" cy="224" rx="5" ry="10" fill="#111" stroke="#333"/>
-          <!-- Exhaust -->
           <ellipse cx="408" cy="224" rx="4" ry="8" fill="#111" stroke="#333"/>
           <text class="a320-label" x="355" y="245" text-anchor="middle">ENGINE</text>
         </g>
-
         <!-- Tail fin -->
         <g id="fin-zone" class="a320-zone" data-zone="fin">
           <path d="M 760 88 L 790 40 L 820 88 Z" class="zone-fill"/>
           <path d="M 760 88 L 790 40 L 820 88 Z" class="zone-stroke"/>
           <path d="M 760 88 L 790 40 L 820 88 Z" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
-          <!-- Spirit logo on tail -->
           <text x="790" y="72" text-anchor="middle" fill="#FCD116" font-size="12" font-weight="bold" font-family="sans-serif">NK</text>
           <text class="a320-label" x="800" y="35" text-anchor="middle">TAIL FIN</text>
         </g>
-
         <!-- Horizontal stabilizer -->
         <path d="M 730 140 L 690 175 L 830 170 L 830 140 Z" fill="#151515" stroke="#252525" stroke-width="1"/>
-
-        <!-- Landing gear hint -->
+        <!-- Landing gear -->
         <line x1="350" y1="225" x2="350" y2="245" stroke="#333" stroke-width="2"/>
         <ellipse cx="350" cy="247" rx="14" ry="5" fill="#111" stroke="#2a2a2a"/>
         <line x1="480" y1="225" x2="480" y2="245" stroke="#333" stroke-width="2"/>
         <ellipse cx="480" cy="247" rx="14" ry="5" fill="#111" stroke="#2a2a2a"/>
-        <!-- Nose gear -->
         <line x1="140" y1="140" x2="140" y2="245" stroke="#333" stroke-width="2"/>
         <ellipse cx="140" cy="247" rx="10" ry="4" fill="#111" stroke="#2a2a2a"/>
-
         <!-- Ground line -->
         <line x1="30" y1="250" x2="870" y2="250" stroke="#222" stroke-width="1.5"/>
-
-        <!-- Registration text -->
-        <text x="450" y="123" fill="#555" font-size="9" font-family="var(--mono)" text-anchor="middle" letter-spacing="3">N&#9999;&#9999;&#9999;NK</text>
+        <text x="450" y="123" fill="#555" font-size="9" font-family="monospace" text-anchor="middle" letter-spacing="3">N · NK · A320 FAM</text>
       </svg>
-
-      <!-- Interactive tooltip -->
       <div class="zone-tooltip" id="zone-tip"></div>
     </div>
   </div>
 </section>
-
 <!-- TICKER -->
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker-track" id="ticker">
@@ -590,7 +525,6 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
     <span class="tick-item">◆ AIRBUS A319 · A320 · A321</span>
     <span class="tick-item">◆ ATA CHAPTER CERTIFIED TECH</span>
     <span class="tick-item">◆ KEEP THE SPIRIT ALIVE ◆</span>
-    <!-- duplicate for seamless loop -->
     <span class="tick-item">✈ SPIRIT AIRLINES 1983–2024</span>
     <span class="tick-item">◆ AIRBUS A320 FAMILY</span>
     <span class="tick-item">◆ IAE V2500-A5 ENGINE</span>
@@ -605,13 +539,11 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
     <span class="tick-item">◆ KEEP THE SPIRIT ALIVE ◆</span>
   </div>
 </div>
-
 <!-- AIRCRAFT / STATS -->
 <section id="aircraft" class="section fade-up">
   <p class="sec-label">The Fleet</p>
   <h2 class="sec-title">The Yellow Airbus</h2>
   <p class="sec-desc">Spirit operated an all-Airbus A320 family fleet at its peak — one of the youngest and most fuel-efficient fleets in the Americas. Every aircraft you worked on was a chapter in this story.</p>
-
   <div class="stats-bar">
     <div class="stat-cell"><div class="stat-num" data-target="100">0</div><div class="stat-lbl">Aircraft Maintained</div></div>
     <div class="stat-cell"><div class="stat-num" data-target="41">0</div><div class="stat-lbl">Years of Service</div></div>
@@ -619,29 +551,21 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
     <div class="stat-cell"><div class="stat-num" data-target="19">0</div><div class="stat-lbl">TRAX Modules Certified</div></div>
   </div>
 </section>
-
 <hr class="rule">
-
 <!-- ATA SYSTEMS -->
 <section id="ata" class="section fade-up">
   <p class="sec-label">40-Hour Gen Fam · Course #108T21</p>
   <h2 class="sec-title">ATA Systems Explorer</h2>
   <p class="sec-desc">Every chapter of the A320. Click any card to expand the system overview. These are the systems you lived and breathed on the ramp and in the hangar.</p>
-
-  <div class="ata-grid" id="ata-grid">
-    <!-- Cards injected by JS -->
-  </div>
+  <div class="ata-grid" id="ata-grid"></div>
   <p style="margin-top:1.2rem;font-size:.75rem;color:var(--g)">👆 Tap any card to expand details</p>
 </section>
-
 <hr class="rule">
-
 <!-- ENGINES -->
 <section id="engines" class="section fade-up">
   <p class="sec-label">ATA 71 — Powerplant</p>
   <h2 class="sec-title">The Heart of the A320</h2>
   <p class="sec-desc">Spirit flew both the classic CEO and the next-generation NEO — meaning you worked on two very different propulsion systems on the same type rating.</p>
-
   <div class="engine-grid">
     <div class="eng-card">
       <div class="eng-glow"></div>
@@ -682,8 +606,6 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
       <div class="eng-feat">💡 The Geared Turbofan lets the fan spin at its optimal speed independently from the LP turbine — a fundamental shift from classic turbofan architecture.</div>
     </div>
   </div>
-
-  <!-- V2500 External diagram callout -->
   <div style="margin-top:2rem;background:var(--d2);border:1px solid var(--d4);border-radius:14px;padding:1.5rem 2rem;">
     <p class="sec-label" style="margin-bottom:.5rem">Reference Documents</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.75rem;margin-top:1rem;">
@@ -702,15 +624,12 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
     </div>
   </div>
 </section>
-
 <hr class="rule">
-
 <!-- APU -->
 <section id="apu" class="section fade-up">
   <p class="sec-label">ATA 49 — Auxiliary Power Unit</p>
   <h2 class="sec-title">The APU Corner</h2>
   <p class="sec-desc">Spirit's A320 family used two APU types depending on aircraft vintage. Both provided bleed air for engine starting and electrical power on the ground.</p>
-
   <div class="apu-grid">
     <div class="apu-card">
       <div class="apu-model">APIC APS 3200</div>
@@ -739,20 +658,16 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
       </div>
     </div>
   </div>
-
   <div style="margin-top:1.5rem;background:rgba(252,209,22,.05);border:1px solid rgba(252,209,22,.15);border-radius:10px;padding:1rem 1.5rem;font-size:.83rem;color:var(--lg);line-height:1.7">
     🔑 <strong style="color:var(--y)">Pro Tip from the course:</strong> APU overhead controls and ECAM APU System Page — always cross-check ECAM indications with physical component inspection. The system page shows real-time oil temperature, oil pressure, EGT, and speed (%RPM).
   </div>
 </section>
-
 <hr class="rule">
-
 <!-- COCKPIT -->
 <section id="cockpit" class="section fade-up">
   <p class="sec-label">The Flight Deck</p>
   <h2 class="sec-title">Cockpit Panels</h2>
   <p class="sec-desc">The Airbus A320 glass cockpit is split-crew operation with full fly-by-wire. For maintenance, knowing which system lives on which panel is essential.</p>
-
   <div class="cockpit-grid">
     <div class="cockpit-card">
       <div class="cc-icon">🎛️</div>
@@ -767,7 +682,7 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
     <div class="cockpit-card">
       <div class="cc-icon">🖱️</div>
       <div class="cc-name">Pedestal Panel</div>
-      <div class="cc-desc">Engine thrust levers, TOGA, FLEX/MCT detents, reversers, speed brake lever, flap/slat lever, park brake, ATC transponder, ACARS/SATCOM controls, and the MCDU (Multifunction Control Display Unit) for FMS entries.</div>
+      <div class="cc-desc">Engine thrust levers, TOGA, FLEX/MCT detents, reversers, speed brake lever, flap/slat lever, park brake, ATC transponder, ACARS/SATCOM controls, and the MCDU for FMS entries.</div>
     </div>
     <div class="cockpit-card">
       <div class="cc-icon">◀️</div>
@@ -777,29 +692,25 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
     <div class="cockpit-card">
       <div class="cc-icon">▶️</div>
       <div class="cc-name">Right Instrument Panel</div>
-      <div class="cc-desc">First Officer's side: mirror of captain's PFD and ND. Contains the KCCU (Keyboard Cursor Control Unit) and MCDU. Right audio control panel for VHF 2, VHF 3, and navigation radio tuning.</div>
+      <div class="cc-desc">First Officer's side: mirror of captain's PFD and ND. Contains the KCCU and MCDU. Right audio control panel for VHF 2, VHF 3, and navigation radio tuning.</div>
     </div>
     <div class="cockpit-card">
       <div class="cc-icon">⚠️</div>
       <div class="cc-name">ECAM / Caution System</div>
-      <div class="cc-desc">The E/WD upper display shows engine parameters and alerts. Lower SD shows the selected system page. ECAM actions (checklists) appear automatically. A&P techs use the CFDS (Centralized Fault Display System) via the MCDU for fault isolation.</div>
+      <div class="cc-desc">The E/WD upper display shows engine parameters and alerts. Lower SD shows the selected system page. ECAM actions appear automatically. A&amp;P techs use the CFDS via the MCDU for fault isolation.</div>
     </div>
   </div>
-
   <div style="margin-top:1.5rem;background:var(--d2);border:1px solid var(--d4);border-radius:12px;padding:1.2rem 1.5rem;">
     <p style="font-size:.75rem;color:var(--y);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem">⚡ ATA 24 Note</p>
     <p style="font-size:.82rem;color:var(--lg);line-height:1.7">Panels <strong style="color:var(--w)">2000VU</strong> and <strong style="color:var(--w)">2001VU</strong> on the overhead are high-voltage areas. Exercise caution when opening — always verify power state via ECAM electrical page before working in these zones.</p>
   </div>
 </section>
-
 <hr class="rule">
-
 <!-- TRAX -->
 <section id="trax" class="section wide fade-up">
   <p class="sec-label">MRO Software Proficiency</p>
   <h2 class="sec-title">TRAX Operations Board</h2>
-  <p class="sec-desc">Spirit used TRAX Enterprise as its MRO (Maintenance, Repair &amp; Overhaul) software. Every squawk, every part pull, every work order — it all lived in TRAX. You were certified across all 21 modules.</p>
-
+  <p class="sec-desc">Spirit used TRAX Enterprise as its MRO software. Every squawk, every part pull, every work order — it all lived in TRAX. You were certified across all 21 modules.</p>
   <div class="trax-board">
     <div class="trax-titlebar">
       <div class="trax-dots"><div class="td td1"></div><div class="td td2"></div><div class="td td3"></div></div>
@@ -809,15 +720,12 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
     <div class="trax-modules" id="trax-modules"></div>
   </div>
 </section>
-
 <hr class="rule">
-
 <!-- AIRBUS WORLD -->
 <section id="tools" class="section fade-up">
   <p class="sec-label">Digital Tools</p>
   <h2 class="sec-title">The Tech Toolkit</h2>
   <p class="sec-desc">Modern A320 maintenance goes beyond the hangar — Airbus's digital ecosystem gave you access to the full technical library, fault isolation, and maintenance documentation in real time.</p>
-
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem;margin-top:2rem;">
     <div class="cockpit-card">
       <div class="cc-icon">🌐</div>
@@ -847,36 +755,31 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
     <div class="cockpit-card">
       <div class="cc-icon">✈️</div>
       <div class="cc-name">Flight Phases</div>
-      <div class="cc-desc">The A320 defines 10 flight phases from engine start to final shutdown. Critical for maintenance — knowing which phase a defect occurred in narrows fault isolation dramatically. Phase-specific vibrations, transients, and faults each tell a story.</div>
+      <div class="cc-desc">The A320 defines 10 flight phases from engine start to final shutdown. Critical for maintenance — knowing which phase a defect occurred in narrows fault isolation dramatically.</div>
     </div>
   </div>
 </section>
-
 <hr class="rule">
-
 <!-- TIMELINE -->
 <section id="timeline" class="section fade-up">
   <p class="sec-label">Spirit Airlines History</p>
   <h2 class="sec-title">1983 — 2024</h2>
-  <p class="sec-desc">From a charter airline in Michigan to a 200-aircraft ultra-low-cost giant — and finally, one last gate close. Here's how it unfolded.</p>
-
+  <p class="sec-desc">From a charter airline in Michigan to a 200-aircraft ultra-low-cost giant — and finally, one last gate close.</p>
   <div class="timeline">
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1983</div><div class="tl-event">Founded as Charter One Airlines</div><div class="tl-detail">Incorporated in Eastpointe, Michigan. Initial operations as a charter carrier with a small fleet of piston-engine aircraft.</div></div>
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1990</div><div class="tl-event">Rebranded to Spirit Airlines</div><div class="tl-detail">The Spirit name took hold. The airline began its expansion toward scheduled service and started building the identity that would become iconic in American aviation.</div></div>
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1994</div><div class="tl-event">All-Jet Airline Transition</div><div class="tl-detail">Spirit completed its transformation to an all-jet carrier, operating DC-9s and MD-80s. The yellow brand identity began to solidify around this era.</div></div>
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2001</div><div class="tl-event">Headquarters: Miramar, Florida</div><div class="tl-detail">Spirit relocated its headquarters to Miramar, FL — solidifying its identity as a Florida-based carrier focused on sun and value destinations throughout the Americas.</div></div>
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2007</div><div class="tl-event">First Airbus Orders — A319 &amp; A320</div><div class="tl-detail">Spirit signed its first major Airbus order, beginning the transition that would eventually result in a 100% A320 family fleet. The yellow Airbus era had begun.</div></div>
-    <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2011</div><div class="tl-event">IPO &amp; 100% Airbus Fleet</div><div class="tl-detail">Spirit went public on the NYSE (SAVE) and completed the transition to an all-Airbus A320 family fleet — the standardization that made maintenance training like the 40-hour Gen Fam possible.</div></div>
-    <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2014</div><div class="tl-event">A321 Enters Spirit Service</div><div class="tl-detail">The larger A321ceo joined the fleet, opening higher-density routes. Spirit became one of the densest-configured operators in the world — maximizing every square foot of cabin.</div></div>
-    <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2017</div><div class="tl-event">A320neo Family Arrives</div><div class="tl-detail">The A320neo with PW1100G-JM Geared Turbofan engines entered the Spirit fleet — introducing a whole new propulsion architecture that A&amp;P techs had to master alongside the classic V2500.</div></div>
-    <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2021</div><div class="tl-event">40-Hour Gen Fam Course #108T21</div><div class="tl-detail">The A320 General Familiarization course that this archive documents. Built by Spirit Tech Ops Training, revised by David Jones. ATA chapters 21 through 71 — the complete aircraft in five days.</div></div>
-    <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2022–23</div><div class="tl-event">Acquisition Bids: Frontier &amp; JetBlue</div><div class="tl-detail">Frontier Airlines made a merger bid, then JetBlue made a higher offer. The JetBlue-Spirit merger was ultimately blocked by the U.S. Department of Justice in January 2024 on antitrust grounds.</div></div>
-    <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">NOV 2024</div><div class="tl-event">Final Flight — Spirit Ceases Operations</div><div class="tl-detail">Spirit Airlines filed for Chapter 11 bankruptcy protection and subsequently ceased all operations. The yellow fleet was grounded. After 41 years, the last Spirit gate closed. But the Spirit — and the people who kept those jets flying — lives on.</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2011</div><div class="tl-event">IPO &amp; 100% Airbus Fleet</div><div class="tl-detail">Spirit went public on the NYSE (SAVE) and completed the transition to an all-Airbus A320 family fleet.</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2014</div><div class="tl-event">A321 Enters Spirit Service</div><div class="tl-detail">The larger A321ceo joined the fleet, opening higher-density routes. Spirit became one of the densest-configured operators in the world.</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2017</div><div class="tl-event">A320neo Family Arrives</div><div class="tl-detail">The A320neo with PW1100G-JM Geared Turbofan engines entered the Spirit fleet — introducing a whole new propulsion architecture for A&amp;P techs to master.</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2021</div><div class="tl-event">40-Hour Gen Fam Course #108T21</div><div class="tl-detail">The A320 General Familiarization course that this archive documents. Built by Spirit Tech Ops Training. ATA chapters 21 through 71 — the complete aircraft in five days.</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2022–23</div><div class="tl-event">Acquisition Bids: Frontier &amp; JetBlue</div><div class="tl-detail">The JetBlue-Spirit merger was ultimately blocked by the U.S. Department of Justice in January 2024 on antitrust grounds.</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">NOV 2024</div><div class="tl-event">Final Flight — Spirit Ceases Operations</div><div class="tl-detail">Spirit Airlines filed for Chapter 11 and ceased all operations. The yellow fleet was grounded. After 41 years, the last Spirit gate closed. But the Spirit — and the people who kept those jets flying — lives on.</div></div>
   </div>
 </section>
-
 <hr class="rule">
-
 <!-- TRIBUTE -->
 <section id="tribute">
   <div class="tribute-glow"></div>
@@ -906,13 +809,11 @@ footer { background:#000; padding:3rem 2rem; text-align:center; border-top:1px s
     <p class="trib-sig">With respect · <strong>Spirit Airlines A&amp;P Legacy Archive</strong></p>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer>
   <div class="foot-logo">NK · SPIRIT AIRLINES</div>
   <div class="foot-sub">1983 – 2024 · Miramar, Florida · IATA: NK · ICAO: NKS · A320 Family · A&amp;P Legacy Archive</div>
 </footer>
-
 <script>
 // ── STARS ──
 const sf = document.getElementById('stars');
@@ -923,7 +824,6 @@ for(let i=0;i<120;i++){
   s.style.cssText=`width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--del:${Math.random()*4}s;`;
   sf.appendChild(s);
 }
-
 // ── RUNWAY DASHES ──
 const rc=document.getElementById('runway-dashes');
 for(let i=0;i<8;i++){
@@ -932,7 +832,6 @@ for(let i=0;i<8;i++){
   d.style.animationDelay=`${-i*0.175}s`;
   rc.appendChild(d);
 }
-
 // ── ATA DATA ──
 const ata = [
   {ch:'ATA 21',name:'Air Conditioning',emoji:'❄️',blurb:'Pack controllers, packs, dual-duct mixing, temperature regulation, zone temperature control. Spirit runs two air conditioning packs (B-Pack and A-Pack) drawing bleed air from the engines or APU.'},
@@ -951,15 +850,14 @@ const ata = [
   {ch:'ATA 34',name:'Navigation',emoji:'🧭',blurb:'ADIRU ×3 (ADR + IRS in one LRU), GPS ×2, VOR ×2, ILS ×2, DME ×2, ADF ×2, RA ×2, GPWS/EGPWS, TCAS II. FMS uses multi-sensor navigation. ADIRU is the heart — feeds attitude, airspeed, and position to everything.'},
   {ch:'ATA 35',name:'Oxygen',emoji:'🫁',blurb:'Crew: continuous flow gaseous O₂ cylinders (green), masks at each crew position. Passenger: chemical generators per overhead panel in masks. Cargo suppression: Halon 1301. Portable PBEs for crew smoke evacuation.'},
   {ch:'ATA 36',name:'Pneumatics',emoji:'💨',blurb:'Bleed air from engines (LP and HP taps) or APU. HP Check Valves, Cross Bleed Valve, Wing Anti-Ice, Packs, Pressurization, Water System pressurization, and engine starting. Bleed configuration controlled via overhead BLEED panel.'},
-  {ch:'ATA 38',name:'Water / Waste',emoji:'🚿',blurb:'Potable water: pressurized by bleed/nitrogen (ground check valves). Waste: vacuum system (Blue jet toilets) — in-flight uses ambient differential pressure below 16,000 ft, ejector above. Drain system prevents cabin depressurization during drain.'},
-  {ch:'ATA 46',name:'Information Systems',emoji:'💻',blurb:'ACARS data uplink/downlink, ATSU (Air Traffic Service Unit), avionics LAN. Spirit used ACARS for OOOI times, ACMS reports, and EFB interfaces. Avionics Broadcast Data Collector (ABDC) feeds the maintenance data bus.'},
+  {ch:'ATA 38',name:'Water / Waste',emoji:'🚿',blurb:'Potable water: pressurized by bleed/nitrogen (ground check valves). Waste: vacuum system (Blue jet toilets) — in-flight uses ambient differential pressure below 16,000 ft, ejector above.'},
+  {ch:'ATA 46',name:'Information Systems',emoji:'💻',blurb:'ACARS data uplink/downlink, ATSU (Air Traffic Service Unit), avionics LAN. Spirit used ACARS for OOOI times, ACMS reports, and EFB interfaces.'},
   {ch:'ATA 49',name:'Auxiliary Power Unit',emoji:'⚙️',blurb:'APIC APS3200 (A320ceo) or Honeywell 131-9a (A321/later). Provides bleed air for packs and engine start, plus electrical power on ground. ECAM APU page shows EGT, oil temp/press, speed (%N). Accessed at tailcone service door.'},
-  {ch:'ATA 52',name:'Doors',emoji:'🚪',blurb:'A320: Doors 1-4 plus overwing exits. A321(NX): new config — Door 2 deleted, Door 3 moved aft, wider slides on Doors 1 & 4. Escape slide pressure bottles located with each door. ADIRS senses door state via LGCIU.'},
+  {ch:'ATA 52',name:'Doors',emoji:'🚪',blurb:'A320: Doors 1-4 plus overwing exits. A321(NX): new config — Door 2 deleted, Door 3 moved aft, wider slides on Doors 1 & 4. Escape slide pressure bottles located with each door.'},
   {ch:'ATA 71',name:'Power Plant',emoji:'🔩',blurb:'Engine installation, cowlings, thrust reverser, engine mounts, drain systems. Air Turbine Starter uses engine oil lubrication — add oil through fill port on new/overhauled unit before first start. Engine oil check: within 1 hour of shutdown.'},
 ];
-
 const grid = document.getElementById('ata-grid');
-ata.forEach((a,i)=>{
+ata.forEach((a)=>{
   const card = document.createElement('div');
   card.className='ata-card';
   card.innerHTML=`<div class="ata-emoji">${a.emoji}</div><div class="ata-ch">${a.ch}</div><div class="ata-name">${a.name}</div><div class="ata-blurb">${a.blurb}</div><div class="ata-tip">Click to expand ↓</div>`;
@@ -969,7 +867,6 @@ ata.forEach((a,i)=>{
   });
   grid.appendChild(card);
 });
-
 // ── TRAX MODULES ──
 const traxMods = [
   '01. Defect Open','02. Defect Close','03. Oil Used Entry',
@@ -983,9 +880,8 @@ const traxMods = [
   '19. Reprint Parts Transaction Tag (M-20A)','20. Non-Routine Linking Procedures',
   '21. Production Turnover SOP'
 ];
-
 const tm = document.getElementById('trax-modules');
-traxMods.forEach((m,i)=>{
+traxMods.forEach((m)=>{
   const num = m.split('.')[0].trim();
   const name = m.split('. ').slice(1).join('. ');
   const d = document.createElement('div');
@@ -993,7 +889,6 @@ traxMods.forEach((m,i)=>{
   d.innerHTML=`<div class="trax-num">${num}</div><div class="trax-mname">${name}</div><span class="trax-check">✓</span>`;
   tm.appendChild(d);
 });
-
 // ── A320 ZONE TOOLTIPS ──
 const zoneData = {
   cockpit:  { title:'COCKPIT · NOSE', text:'Radome, flight deck, ADIRU, windshields\nPitot/static probes, angle-of-attack vanes' },
@@ -1003,7 +898,7 @@ const zoneData = {
   tail:     { title:'TAIL CONE · APU', text:'ATA 49 · APIC APS3200 or Honeywell 131-9a\nAPU inlet, exhaust, chip detector' },
   wing:     { title:'MAIN WING · ATA 27/28', text:'Wing fuel cells (inner/outer), filler caps\nSlats, flaps, ailerons, spoilers, sharklet' },
   engine:   { title:'ENGINE · ATA 71', text:'IAE V2500-A5 (CEO) or PW1100G-JM (NEO)\nAir Turbine Starter, oil servicing, cowlings' },
-  fin:      { title:'VERTICAL FIN · ATA 27', text:'Rudder, yaw damper actuators, PCU\nNK tail livery — Spirit's signature look' },
+  fin:      { title:'VERTICAL FIN · ATA 27', text:'Rudder, yaw damper actuators, PCU\nNK tail livery — Spirit\'s signature look' },
 };
 const tip = document.getElementById('zone-tip');
 document.querySelectorAll('.a320-zone').forEach(zone=>{
@@ -1020,7 +915,6 @@ document.querySelectorAll('.a320-zone').forEach(zone=>{
   });
   zone.addEventListener('mouseleave', ()=> tip.classList.remove('show'));
 });
-
 // ── ANIMATED COUNTERS ──
 function animateCounter(el, target){
   let cur=0; const dur=1800; const start=performance.now();
@@ -1028,13 +922,12 @@ function animateCounter(el, target){
     const p=Math.min((now-start)/dur,1);
     const ease=1-Math.pow(1-p,3);
     cur=Math.round(ease*target);
-    el.textContent=cur+(target===41?'':'+'[0]);
+    el.textContent=cur;
     if(p<1) requestAnimationFrame(step);
     else el.textContent=target+(target<50?'':'+');
   }
   requestAnimationFrame(step);
 }
-
 // ── SCROLL OBSERVER ──
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!prefersReduced && 'IntersectionObserver' in window) {
@@ -1043,7 +936,6 @@ if (!prefersReduced && 'IntersectionObserver' in window) {
     entries.forEach(en=>{
       if(en.isIntersecting){
         en.target.classList.add('vis');
-        // trigger counters if stat-num inside
         en.target.querySelectorAll('[data-target]').forEach(el=>{
           animateCounter(el, +el.dataset.target);
           el.removeAttribute('data-target');
@@ -1056,17 +948,6 @@ if (!prefersReduced && 'IntersectionObserver' in window) {
 } else {
   document.querySelectorAll('.fade-up').forEach(el=>el.classList.add('vis'));
 }
-
-// ── FIDS CLOCK ──
-function updateFids(){
-  const now=new Date();
-  const h=String(now.getHours()).padStart(2,'0');
-  const m=String(now.getMinutes()).padStart(2,'0');
-  const rows=document.querySelectorAll('.fids-row .fc-time');
-  // Just animate the last row time gently
-}
-setInterval(updateFids,1000);
-
 // ── SMOOTH PARALLAX STARS on scroll ──
 window.addEventListener('scroll',()=>{
   const y=window.scrollY;
