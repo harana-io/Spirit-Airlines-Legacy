@@ -1,0 +1,16 @@
+# Ignore all Spirit Airlines source training materials (proprietary)
+Spirit Airlines/
+Spirit Airlines.zip
+
+# macOS junk
+.DS_Store
+**/.DS_Store
+
+# Misc
+*.pptx
+*.ppt
+*.pdf
+*.wmv
+*.mp4
+*.url
+*.ppt
